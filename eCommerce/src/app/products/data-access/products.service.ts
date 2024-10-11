@@ -21,4 +21,9 @@ export class ProductsService extends BaseHttpService{
         });
     }
 
+    getProduct(id: string){
+        console.log('entro')
+        return this.http.get<Product>(`${this.apirUrl}/products/${id}`);
+    }
+
 }
